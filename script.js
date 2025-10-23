@@ -20,12 +20,12 @@ window.addEventListener("load", () => {
 submitBtn.addEventListener("click", (e) => {
   if (username.value && password.value) {
     if (checkbox.checked) {
-      alert(`Logged in as checked ${username.value}`);
+      alert(`Logged in as ${username.value}`);
       localStorage.setItem("Username", username.value);
       localStorage.setItem("Password", password.value);
       existingBtn.style.display = "inline-block"; // show after saving
     } else {
-      alert(`Logged in as not checked ${username.value}`);
+      alert(`Logged in as ${username.value}`);
       localStorage.removeItem("Username");
       localStorage.removeItem("Password");
       existingBtn.style.display = "none"; // hide if unchecked login
